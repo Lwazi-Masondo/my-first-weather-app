@@ -10,7 +10,7 @@ body {
   padding: 0;
   font-family: "Noto Sans", sans-serif;
   font-size: 62.5%;
-  background-image: url(/weather-app/media/sunset.png);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/722/original/sunset.png?1752709256");
   background-color: #d9d9d9;
   background-position: center top;
   background-repeat: no-repeat;
