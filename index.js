@@ -40,6 +40,10 @@ function formateDate(date) {
     minutes = `0${minutes}`;
   }
 
+  if (hours < 10) {
+    hours = `0${minutes}`;
+  }
+
   return `${day} ${hours}:${minutes}`;
 }
 
