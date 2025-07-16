@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>My first weather App</title>
   </head>
   <body>
@@ -20,14 +21,20 @@
           placeholder="Enter a city.."
           required
           class="input"
+          id="search-input"
         />
-        <input type="submit" value="Search" class="search-button" />
+        <input
+          type="submit"
+          value="Search"
+          class="search-button"
+          id="search-button"
+        />
       </form>
     </header>
     <main>
       <div class="main-container">
         <section>
-          <h1>Paris</h1>
+          <h1 id="city"></h1>
           <p>
             Tuesday 14:50, Scattered Clouds
             <br />
@@ -36,11 +43,20 @@
           </p>
           <div class="current-temperature current-temp-container">
             <div class="current-weather-icon">⛅</div>
-            14°C
+            <div class="temperature-data"></div>
+            °C
           </div>
         </section>
         <section>
           <div class="weekly-forcast-container">
+            <div class="daily-temps">
+              <h2>Tue</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
             <div class="daily-temps">
               <h2>Tue</h2>
               <div class="weather-icon">⛅</div>

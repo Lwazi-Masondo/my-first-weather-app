@@ -71,7 +71,7 @@ form {
 .main-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: rgb(217, 217, 217, 0.5);
   border: 5px solid rgb(255, 255, 255, 0.2);
@@ -88,7 +88,7 @@ form {
     transform: scaleX(1); /* normal */
   }
   50% {
-    transform: scaleX(1.1); /* stretched horizontally */
+    transform: scaleX(1.05); /* stretched horizontally */
   }
   100% {
     transform: scaleX(1); /* back to normal */
@@ -108,13 +108,12 @@ footer {
 }
 
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 p {
-  line-height: 2.4rem;
+  line-height: 2rem;
   font-size: 1.3rem;
 }
 
@@ -133,7 +132,7 @@ p {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .weather-icon {
