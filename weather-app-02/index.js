@@ -61,3 +61,28 @@ const searchButton = document
   .addEventListener("click", searchEvent);
 
 searchCity("Paris");
+
+function weatherForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forcastHtml = "";
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  days.forEach(function (day) {
+    forcastHtml =
+      forcastHtml +
+      `
+            <div class="daily-temps">
+              <h2>${day}</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
+          `;
+  });
+
+  forecast.innerHTML = forcastHtml;
+}
+
+weatherForecast();
