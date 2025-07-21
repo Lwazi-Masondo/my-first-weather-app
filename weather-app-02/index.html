@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="/media/sunset.png" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <title>My first weather App</title>
+  </head>
+  <body>
+    <header>
+      <form action="">
+        <input
+          type="search"
+          placeholder="Enter a city.."
+          required
+          class="input"
+          id="search-input"
+        />
+        <input
+          type="submit"
+          value="Search"
+          class="search-button"
+          id="search-button"
+        />
+      </form>
+    </header>
+    <main>
+      <div class="main-container">
+        <section>
+          <h1 id="city"></h1>
+          <p>
+            <span class="time-element"></span>, <span class="condition"></span>
+            <br />
+            Humidity:
+            <span class="humidity-wind"><span class="humidity"></span>%</span>,
+            Wind:
+            <span class="humidity-wind"><span class="wind"></span>km/h</span>
+          </p>
+          <div class="current-temperature current-temp-container">
+            <div class="current-weather-icon"></div>
+            <div class="temperature-data"></div>
+            °C
+          </div>
+        </section>
+        <!-- <section>
+          <div class="weekly-forcast-container">
+            <div class="daily-temps">
+              <h2>Tue</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
+            <div class="daily-temps">
+              <h2>Tue</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
+            <div class="daily-temps">
+              <h2>Tue</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
+            <div class="daily-temps">
+              <h2>Tue</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
+            <div class="daily-temps">
+              <h2>Tue</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
+            <div class="daily-temps">
+              <h2>Tue</h2>
+              <div class="weather-icon">⛅</div>
+              <div class="temperature">
+                <div class="min-temp">5°C</div>
+                10°C
+              </div>
+            </div>
+          </div>
+        </section> -->
+      </div>
+    </main>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/Lwazi-Masondo" target="_blank"
+        >Nolwazi Masondo</a
+      >, is
+      <a
+        href="https://github.com/Lwazi-Masondo/my-first-weather-app"
+        target="_blank"
+        >open-sourced on GitHub</a
+      >
+      and
+      <a href="https://lwazi-first-weather-app.netlify.app/" target="_blank"
+        >hosted on Netlify.</a
+      >
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

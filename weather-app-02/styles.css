@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 62.5%;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/722/original/sunset.png?1752709256");
+  background-color: #d9d9d9;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.input {
+  width: 800px;
+  height: 50px;
+  border-radius: 50px;
+  border: 3px solid #fda403;
+  /* box-shadow: 5px 4px 3px 2px; */
+  text-indent: 2rem;
+  background-color: rgb(217, 217, 217, 0.5);
+  font-size: 1.5rem;
+  box-shadow: 0rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.input:focus {
+  outline: none;
+  background-color: rgb(217, 217, 217, 0.8);
+}
+
+.search-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #fda403;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  box-shadow: 0rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.search-button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(217, 217, 217, 0.5);
+  border: 5px solid rgb(255, 255, 255, 0.2);
+  border-radius: 50%;
+  text-align: center;
+  width: 1000px;
+  height: 550px;
+  box-shadow: 0rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+  animation: stretchHorizontal 5s ease-in-out infinite;
+}
+
+@keyframes stretchHorizontal {
+  0% {
+    transform: scaleX(1); /* normal */
+  }
+  50% {
+    transform: scaleX(1.05); /* stretched horizontally */
+  }
+  100% {
+    transform: scaleX(1); /* back to normal */
+  }
+}
+
+.weekly-forcast-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+footer {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+.current-temperature {
+  font-size: 3rem;
+}
+
+.daily-temps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100px;
+  padding: 0.5rem 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.weather-icon {
+  font-size: 4rem;
+}
+.current-temp-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.current-weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+.min-temp {
+  color: #e8751a;
+}
+.humidity-wind {
+  color: #e8751a;
+  font-weight: bold;
+}
+
+a {
+  color: #da4804;
+}
+
+a:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
