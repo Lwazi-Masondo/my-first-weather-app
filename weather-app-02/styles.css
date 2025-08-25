@@ -37,8 +37,8 @@ form {
 }
 
 .input {
-  width: 800px;
-  height: 50px;
+  width: 750px;
+  height: 45px;
   border-radius: 50px;
   border: 3px solid #fda403;
   /* box-shadow: 5px 4px 3px 2px; */
@@ -50,12 +50,12 @@ form {
 
 .input:focus {
   outline: none;
-  background-color: rgb(217, 217, 217, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .search-button {
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 45px;
   border-radius: 50px;
   background-color: #fda403;
   border: none;
@@ -65,7 +65,9 @@ form {
 }
 
 .search-button:hover {
-  opacity: 80%;
+  border: 3px solid #fda403;
+  background-color: rgba(151, 110, 121, 0.5);
+  color: #fda403;
   cursor: pointer;
 }
 
@@ -82,6 +84,7 @@ form {
   height: 550px;
   box-shadow: 0rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
   animation: stretchHorizontal 5s ease-in-out infinite;
+  margin-bottom: 25px;
 }
 
 @keyframes stretchHorizontal {
@@ -137,7 +140,8 @@ h2 {
 }
 
 .weather-icon {
-  font-size: 4rem;
+  width: 100px;
+  height: 100px;
 }
 .current-temp-container {
   display: flex;
@@ -158,8 +162,9 @@ h2 {
   gap: 1rem;
   font-size: 1.3rem;
 }
-.min-temp {
+.max-temp {
   color: #e8751a;
+  font-weight: bold;
 }
 .humidity-wind {
   color: #e8751a;
@@ -174,3 +179,64 @@ a:hover {
   color: #ffffff;
   cursor: pointer;
 }
+/* 
+1090px */
+/* @media (max-width: 68rem) { */
+/* font-size calculation : 10px / 16px * 100 */
+/* body {
+    font-size: 30%;
+  }
+
+  .main-container {
+    width: 900px;
+    height: 550px;
+  }
+  .input {
+    width: 650px;
+  }
+
+  .current-weather-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+
+  .weather-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .daily-temps {
+    width: 90px;
+  } */
+/* } */
+/* 
+1090px
+@media (max-width: 61rem) {
+ font-size calculation : 10px / 16px * 100 */
+/* body {
+    font-size: 25%;
+  }
+
+  .main-container {
+    width: 850px;
+    height: 550px;
+  }
+  .input {
+    width: 650px;
+  }
+
+  .current-weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .weather-icon {
+    width: 0px;
+    height: 90px;
+  }
+
+  .daily-temps {
+    width: 90px;
+  } */

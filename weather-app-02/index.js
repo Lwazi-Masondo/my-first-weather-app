@@ -18,7 +18,9 @@ function updateWeather(response) {
   currentWeatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" alt="${response.data.condition.icon}">`;
   timeElement.innerHTML = formateDate(date);
 
-  console.log(response.data);
+  getForecast(response.data.city);
+
+  // console.log(response.data);
 }
 
 function formateDate(date) {
@@ -62,27 +64,45 @@ const searchButton = document
 
 searchCity("Paris");
 
-function weatherForecast() {
+function getForecast(city) {
+  let apikey = "949of33a9141a5730eb48aa0tc0df554";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}&units=metric`;
+  axios.get(apiUrl).then(weatherForecast);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  return days[date.getDay()];
+}
+
+function weatherForecast(response) {
   let forecast = document.querySelector("#forecast");
   let forcastHtml = "";
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  days.forEach(function (day) {
-    forcastHtml =
-      forcastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    let minimumTemp = Math.round(day.temperature.minimum);
+    let maximumTemp = Math.round(day.temperature.maximum);
+    let icon = day.condition.icon_url;
+    let alternate = day.condition.icon;
+
+    if (index < 5) {
+      forcastHtml =
+        forcastHtml +
+        `
             <div class="daily-temps">
-              <h2>${day}</h2>
-              <div class="weather-icon">⛅</div>
+              <h2>${formatDay(day.time)}</h2>
+              <div><img src="${icon}" alt="${alternate}  class="weather-icon" ></div>
               <div class="temperature">
-                <div class="min-temp">5°C</div>
-                10°C
+                <div class="max-temp">${maximumTemp}°C</div>
+                ${minimumTemp}°C
               </div>
             </div>
           `;
+    }
   });
 
   forecast.innerHTML = forcastHtml;
+  console.log(response.data.daily[0]);
 }
-
-weatherForecast();
